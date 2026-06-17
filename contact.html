@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — INDIYA NYC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section {
+      padding-top: calc(var(--nav-h) + 6rem);
+      padding-bottom: 7rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 70vh;
+      background: var(--cream);
+    }
+    .contact-section h1 {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+    .contact-form {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      font-family: 'Kantumruy Pro', Georgia, serif;
+      font-size: 0.82rem;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      background: transparent;
+      padding: 0.5rem 0;
+      outline: none;
+      color: var(--charcoal);
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #999; }
+    .contact-form textarea { resize: vertical; min-height: 100px; }
+    .contact-form button {
+      background: var(--claret);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 2.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .contact-form button:hover { opacity: 0.82; }
+  </style>
+</head>
+<body class="page-about">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-left">
+        <a href="shop.html">Shop by Look</a>
+        <a href="about.html">About Us</a>
+        <a href="#">More</a>
+      </div>
+      <div class="nav-center">
+        <a href="/" class="brand-logo" aria-label="Indiya NYC — home">
+          <span class="brand-logo-text">indiya</span>
+          <span class="brand-logo-dot" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <a href="shop.html">Collections</a>
+        <a href="#" aria-label="Shopping bag, 0 items">Bag (0)</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <a href="shop.html">Shop by Look</a>
+    <a href="shop.html">Collections</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Bag (0)</a>
+  </div>
+
+  <main id="main">
+    <section class="contact-section">
+      <h1>Contact</h1>
+      <!--
+        Connect this form to a service like Formspree (https://formspree.io)
+        or Netlify Forms. Replace ACTION_URL below with your form endpoint.
+      -->
+      <form class="contact-form" action="ACTION_URL" method="POST">
+        <input type="text"  name="name"    placeholder="Name"    required />
+        <input type="email" name="email"   placeholder="Email"   required />
+        <input type="text"  name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-head">Socials</p>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">TikTok</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Company</p>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Legal</p>
+          <a href="terms.html">Terms and conditions</a>
+        </div>
+      </div>
+      <p class="footer-copy">Indiya <span id="footer-year">2025</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

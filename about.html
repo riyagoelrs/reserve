@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — INDIYA NYC</title>
+  <meta name="description" content="Indiya NYC is more than a fashion brand—it's a cultural bridge. Rooted in Indian heritage and reimagined for the modern world." />
+  <link rel="canonical" href="https://indiyanyc.com/about.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-about">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+
+      <div class="nav-left">
+        <a href="shop.html">Shop by Look</a>
+        <a href="about.html" aria-current="page">About Us</a>
+        <a href="#">More</a>
+      </div>
+
+      <div class="nav-center">
+        <a href="/" class="brand-logo" aria-label="Indiya NYC — home">
+          <span class="brand-logo-text">indiya</span>
+          <span class="brand-logo-dot" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="about.html" aria-current="page">About Us</a>
+        <a href="shop.html">Collections</a>
+        <a href="#" aria-label="Shopping bag, 0 items">Bag (0)</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <a href="shop.html">Shop by Look</a>
+    <a href="shop.html">Collections</a>
+    <a href="#">Archive</a>
+    <a href="about.html">About Us</a>
+    <a href="#">Bag (0)</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN
+       ═══════════════════════════════════════════ -->
+  <main id="main">
+    <section class="about-section" aria-label="About Indiya NYC">
+
+      <!--
+        ABOUT PHOTO + MARIGOLDS
+        ──────────────────────────────────────────────
+        Replace assets/about-photo.jpg with your vintage family photo.
+        Replace assets/marigold.png with the marigold flower PNG.
+        Both are in your Figma file — export them and save to the assets/ folder.
+        ─────────────────────────────────────────────
+      -->
+      <div class="about-photo-wrap">
+        <img
+          src="assets/about-photo.jpg"
+          alt="Vintage family photograph"
+          class="about-photo"
+          onerror="this.style.background='#ccc5b4';this.style.aspectRatio='3/4';this.removeAttribute('src')"
+        />
+        <img src="assets/marigold.png" alt="" class="marigold marigold-tl" aria-hidden="true"
+             onerror="this.style.display='none'" />
+        <img src="assets/marigold.png" alt="" class="marigold marigold-tr" aria-hidden="true"
+             onerror="this.style.display='none'" />
+        <img src="assets/marigold.png" alt="" class="marigold marigold-br" aria-hidden="true"
+             onerror="this.style.display='none'" />
+      </div>
+
+      <div class="about-text">
+        <p>
+          Indiya NYC is more than a fashion brand—it's a cultural bridge.
+          Rooted in Indian heritage and reimagined for the modern world, INDIYA
+          fuses traditional textiles, motifs, and craftsmanship with contemporary
+          silhouettes, creating garments that tell a story. Our mission is to honor
+          the artistry of Indian artisans while making heritage wearable, relevant,
+          and accessible to a global audience.
+        </p>
+        <p>
+          We believe in ethical production, sustainability, and artisan empowerment,
+          ensuring that every piece carries forward a legacy of craftsmanship.
+          Through our designs, we aim to spark cultural dialogue, challenge fashion
+          norms, and redefine what it means to embrace tradition in a modern context.
+          INDIYA is for those who see fashion as more than just clothing—it's a
+          statement, a connection, and a celebration of identity.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-head">Socials</p>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">TikTok</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Company</p>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Legal</p>
+          <a href="terms.html">Terms and conditions</a>
+        </div>
+      </div>
+      <p class="footer-copy">Indiya <span id="footer-year">2025</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
