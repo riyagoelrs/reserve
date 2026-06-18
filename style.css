@@ -111,6 +111,14 @@ body:not(.page-home) .brand-logo { color: var(--charcoal); }
 
 .site-nav a:hover { opacity: 0.55; transition: opacity 0.2s; }
 
+/* active page link — subtle underline */
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  opacity: 1;
+}
+
 
 /* ── brand logo ── */
 .brand-logo {
@@ -385,6 +393,111 @@ body:not(.page-home) .brand-logo { color: var(--charcoal); }
   text-transform: uppercase;
 }
 
+/* ── Homepage category strip ── */
+.home-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e8e4dc;
+  border-bottom: 1px solid #e8e4dc;
+}
+
+.home-cat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2.5rem 1rem;
+  border-right: 1px solid #e8e4dc;
+  text-align: center;
+  transition: background 0.25s;
+}
+.home-cat-tile:last-child { border-right: none; }
+.home-cat-tile:hover { background: var(--cream); }
+
+.home-cat-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+
+.home-cat-arrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--mid);
+  transition: transform 0.2s;
+}
+.home-cat-tile:hover .home-cat-arrow { transform: translateX(3px); }
+
+/* ── "Also explore" cross-category section ── */
+.also-explore {
+  padding: 4rem 2.5rem;
+  border-top: 1px solid #e8e4dc;
+  text-align: center;
+}
+
+.also-explore-heading {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 2.5rem;
+}
+
+.also-explore-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.also-explore-tile {
+  display: block;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background: var(--placeholder);
+  overflow: hidden;
+}
+
+.also-explore-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.also-explore-tile:hover img { transform: scale(1.04); }
+
+.also-explore-tile-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.25s;
+  gap: 0.35rem;
+}
+.also-explore-tile:hover .also-explore-tile-inner { background: rgba(0,0,0,0.32); }
+
+.also-explore-tile-name {
+  color: #fff;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.also-explore-tile-cta {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* ── Pajamas page ── */
 .page-pajamas { background: #fff; }
 
@@ -524,9 +637,10 @@ body:not(.page-home) .brand-logo { color: var(--charcoal); }
 
 .footer-links {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   justify-content: flex-end;
   margin-bottom: 3.5rem;
+  flex-wrap: wrap;
 }
 
 .footer-col {
@@ -586,6 +700,12 @@ body:not(.page-home) .brand-logo { color: var(--charcoal); }
   .category-tile { aspect-ratio: 3 / 2; }
 
   .custom-steps { grid-template-columns: 1fr; gap: 2rem; }
+
+  .home-categories { grid-template-columns: 1fr; }
+  .home-cat-tile { border-right: none; border-bottom: 1px solid #e8e4dc; padding: 1.5rem 1rem; }
+  .home-cat-tile:last-child { border-bottom: none; }
+
+  .also-explore-tiles { grid-template-columns: 1fr; }
 
   .footer-links {
     flex-direction: column;
